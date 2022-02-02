@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    /**
+     * This lets the user submit their answer by pressing enter  
+     * on the keyboard. We do this by adding an event listener to 
+     * the answer box
+     */ 
+
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
+
     runGame("addition");
 })
 
@@ -25,6 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function runGame(gameType) {
 
+    // This sets the answer box to blank every time the runGame() is called
+    document.getElementById("answer-box").value = "";
+
+    //This sets cursor to be on the answer box every time the game is called
+    document.getElementById("answer-box").focus();
+
+    //Creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25 + 1);
     let num2 = Math.floor(Math.random() * 25 + 1);
 
