@@ -1,3 +1,3 @@
 # Love Maths
 
-![Live site:](https://joyzadan.github.io/love-maths/)
+[Open the quiz here](https://joyzadan.github.io/love-maths/)
